@@ -8,12 +8,10 @@ import org.simpleframework.core.annotation.Controller;
 import org.simpleframework.core.annotation.Repository;
 import org.simpleframework.core.annotation.Service;
 import org.simpleframework.util.ClassUtil;
+import org.simpleframework.util.ValidationUtil;
 
 import java.lang.annotation.Annotation;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
@@ -27,9 +25,10 @@ public class BeanContainer {
 
     /**
      * 是否已经加载过bean
+     *
      * @return
      */
-    boolean isLoaded(){
+    boolean isLoaded() {
         return loaded;
     }
 
@@ -46,7 +45,7 @@ public class BeanContainer {
      * 并发性能较好
      * 存放所有被配置标记的目标对象的Map
      */
-    private final Map<Class<?>,Object> beanMap = new ConcurrentHashMap();
+    private final Map<Class<?>, Object> beanMap = new ConcurrentHashMap();
 
     /**
      * 加载bean的注解列表
@@ -57,17 +56,18 @@ public class BeanContainer {
     /**
      * 获取bean实例容器
      * 单例+使用了枚举方式防止反射的入侵
+     *
      * @return
      */
-    public static BeanContainer getInstance(){
+    public static BeanContainer getInstance() {
         return ContainerHolder.HOLDER.instance;
     }
 
-    private enum ContainerHolder{
+    private enum ContainerHolder {
         HOLDER;
         private BeanContainer instance;
 
-        private ContainerHolder(){
+        private ContainerHolder() {
             instance = new BeanContainer();
         }
     }
@@ -75,30 +75,129 @@ public class BeanContainer {
     /**
      * 扫描加载所有的bean
      * 为了防止两个线程都加载beans，我们加上Synchronized
+     *
      * @param packageName
      */
-    public synchronized void loadBeans(String packageName){
+    public synchronized void loadBeans(String packageName) {
         // 判断beans是否已经被加载过
-        if(isLoaded()){
+        if (isLoaded()) {
             log.warn("BeanContainer has been loaded");
-            return ;
+            return;
         }
         Set<Class<?>> classSet = ClassUtil.extractPackageClass(packageName);
-        if(classSet==null || classSet.isEmpty()){
-            log.warn("extract nothing from packageName"+packageName);
-            return ;
+        if (classSet == null || classSet.isEmpty()) {
+            log.warn("extract nothing from packageName" + packageName);
+            return;
         }
 
-        for(Class<?> clazz:classSet){
-            for(Class<? extends Annotation> annotation:BEAN_ANNOTATION){
+        for (Class<?> clazz : classSet) {
+            for (Class<? extends Annotation> annotation : BEAN_ANNOTATION) {
                 // 如果上面这个类被标记了定义的注解
-                if(clazz.isAnnotationPresent(annotation)){
+                if (clazz.isAnnotationPresent(annotation)) {
                     // 将类的目标本身作为键，目标类的实例作为值，放入到beanMap中
-                    beanMap.put(clazz,ClassUtil.newInstance(clazz,true));
+                    beanMap.put(clazz, ClassUtil.newInstance(clazz, true));
                 }
             }
         }
         loaded = true;
+    }
+
+    /**
+     * 添加一个class对象和它的bean实例
+     *
+     * @param clazz
+     * @param bean
+     * @return
+     */
+    public Object addBean(Class<?> clazz, Object bean) {
+        return beanMap.put(clazz, bean);
+    }
+
+    /**
+     * 移除一个IOC容器管理的对象
+     *
+     * @param clazz
+     * @param bean
+     * @return
+     */
+    public Object removeBean(Class<?> clazz, Object bean) {
+        return beanMap.remove(clazz);
+    }
+
+    /**
+     * 获取class对象的bean实例
+     *
+     * @param clazz
+     * @return
+     */
+    public Object getBean(Class<?> clazz) {
+        return beanMap.get(clazz);
+    }
+
+    /**
+     * 获取容器内所有Class对象的集合
+     *
+     * @return
+     */
+    public Set<Class<?>> getClasses() {
+        return beanMap.keySet();
+    }
+
+    /**
+     * 获取所有beans的集合
+     *
+     * @return
+     */
+    public Set<Object> getBeans() {
+        return new HashSet<>(beanMap.values());
+    }
+
+    /**
+     * 根据注解筛选出Bean的class集合
+     *
+     * @param annotation
+     * @return
+     */
+    public Set<Class<?>> getClassesByAnnotation(Class<? extends Annotation> annotation) {
+        // 1 获取beanMap内所有的class对象
+        Set<Class<?>> keySet = getClasses();
+        if (ValidationUtil.isEmpty(keySet)) {
+            log.warn("nothing in beanMap");
+            return null;
+        }
+        // 2 通过注解筛选被标记的class对象
+        Set<Class<?>> classSet = new HashSet<>();
+        for (Class clazz : keySet) {
+            // 类是否包含相关的标记
+            if (clazz.isAnnotationPresent(annotation)) {
+                classSet.add(clazz);
+            }
+        }
+        return classSet.size() > 0 ? classSet : null;
+    }
+
+    /**
+     * 通过接口或者父类获取实现类或者子类的class集合，不包括本身
+     *
+     * @param interfaceOrClass
+     * @return
+     */
+    public Set<Class<?>> getClassBySuper(Class<?> interfaceOrClass) {
+        // 1 获取beanMap的所有class对象
+        Set<Class<?>> keySet = getClasses();
+        if (ValidationUtil.isEmpty(keySet)) {
+            log.warn("nothing in beanMap");
+            return null;
+        }
+        // 判断传入的类或者接口是否是类的子类，如果是，就将它添加到classSet中
+        Set<Class<?>> classSet = new HashSet<>();
+        for (Class clazz : keySet) {
+            // isAssignableFrom是否是父类
+            if (interfaceOrClass.isAssignableFrom(clazz) && !clazz.equals(interfaceOrClass)) {
+                classSet.add(clazz);
+            }
+        }
+        return classSet.size() > 0 ? classSet : null;
     }
 
 }

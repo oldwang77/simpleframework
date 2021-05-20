@@ -24,7 +24,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -32,26 +32,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/java/com" />
       <recent name="$PROJECT_DIR$/src/main/java/com/imooc" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BeanContainerTest.loadBeansTest">
+  <component name="RunManager" selected="JUnit.BeanContainerTest">
     <configuration name="EnumStarvingSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.pattern.singleton.EnumStarvingSingleton" />
-      <module name="simpleframework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.pattern.singleton.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LazyDoubleCheckSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.pattern.singleton.LazyDoubleCheckSingleton" />
       <module name="simpleframework" />
       <extension name="coverage">
         <pattern>
@@ -76,15 +64,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StarvingSingleon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.pattern.singleton.StarvingSingleon" />
+    <configuration name="BeanContainerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpleframework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.pattern.singleton.*" />
+          <option name="PATTERN" value="org.simpleframework.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.simpleframework.core" />
+      <option name="MAIN_CLASS_NAME" value="org.simpleframework.core.BeanContainerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanContainerTest.getBeanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpleframework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.simpleframework.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.simpleframework.core" />
+      <option name="MAIN_CLASS_NAME" value="org.simpleframework.core.BeanContainerTest" />
+      <option name="METHOD_NAME" value="getBeanTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,20 +162,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.simpleframework [tomcat7:run]" />
-      <item itemvalue="Application.StarvingSingleon" />
-      <item itemvalue="Application.LazyDoubleCheckSingleton" />
       <item itemvalue="Application.SingletonDemo" />
       <item itemvalue="Application.EnumStarvingSingleton" />
       <item itemvalue="JUnit.BeanContainerTest.loadBeansTest" />
+      <item itemvalue="Maven.simpleframework [tomcat7:run]" />
+      <item itemvalue="JUnit.BeanContainerTest.getBeanTest" />
+      <item itemvalue="JUnit.BeanContainerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BeanContainerTest" />
+        <item itemvalue="JUnit.BeanContainerTest.getBeanTest" />
         <item itemvalue="JUnit.BeanContainerTest.loadBeansTest" />
         <item itemvalue="Application.EnumStarvingSingleton" />
         <item itemvalue="Application.SingletonDemo" />
-        <item itemvalue="Application.LazyDoubleCheckSingleton" />
-        <item itemvalue="Application.StarvingSingleon" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +191,7 @@
       <updated>1621219980250</updated>
       <workItem from="1621219985213" duration="769000" />
       <workItem from="1621220768224" duration="10188000" />
-      <workItem from="1621428144158" duration="14237000" />
+      <workItem from="1621428144158" duration="18786000" />
     </task>
     <servers />
   </component>
@@ -209,32 +215,32 @@
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
     <state x="585" y="252" width="925" height="585" key="#xdebugger.evaluate/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621351124522" />
-    <state width="1237" height="280" key="GridCell.Tab.0.bottom" timestamp="1621510848097">
+    <state width="1054" height="320" key="GridCell.Tab.0.bottom" timestamp="1621515548153">
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
     <state width="1697" height="309" key="GridCell.Tab.0.bottom/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621351310822" />
-    <state width="1237" height="280" key="GridCell.Tab.0.bottom/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621510848097" />
+    <state width="1054" height="320" key="GridCell.Tab.0.bottom/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621515548153" />
     <state width="867" height="232" key="GridCell.Tab.0.bottom/0.25.1536.935@0.25.1536.935" timestamp="1621433556663" />
     <state width="877" height="225" key="GridCell.Tab.0.bottom/49.25.1487.935@49.25.1487.935" timestamp="1621233862980" />
-    <state width="1237" height="280" key="GridCell.Tab.0.center" timestamp="1621510848095">
+    <state width="1054" height="320" key="GridCell.Tab.0.center" timestamp="1621515548152">
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
     <state width="1697" height="309" key="GridCell.Tab.0.center/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621351310820" />
-    <state width="1237" height="280" key="GridCell.Tab.0.center/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621510848095" />
+    <state width="1054" height="320" key="GridCell.Tab.0.center/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621515548152" />
     <state width="867" height="232" key="GridCell.Tab.0.center/0.25.1536.935@0.25.1536.935" timestamp="1621433556662" />
     <state width="877" height="225" key="GridCell.Tab.0.center/49.25.1487.935@49.25.1487.935" timestamp="1621233862979" />
-    <state width="1237" height="280" key="GridCell.Tab.0.left" timestamp="1621510848094">
+    <state width="1054" height="320" key="GridCell.Tab.0.left" timestamp="1621515548151">
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
     <state width="1697" height="309" key="GridCell.Tab.0.left/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621351310820" />
-    <state width="1237" height="280" key="GridCell.Tab.0.left/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621510848094" />
+    <state width="1054" height="320" key="GridCell.Tab.0.left/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621515548151" />
     <state width="867" height="232" key="GridCell.Tab.0.left/0.25.1536.935@0.25.1536.935" timestamp="1621433556662" />
     <state width="877" height="225" key="GridCell.Tab.0.left/49.25.1487.935@49.25.1487.935" timestamp="1621233862978" />
-    <state width="1237" height="280" key="GridCell.Tab.0.right" timestamp="1621510848096">
+    <state width="1054" height="320" key="GridCell.Tab.0.right" timestamp="1621515548153">
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
     <state width="1697" height="309" key="GridCell.Tab.0.right/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621351310821" />
-    <state width="1237" height="280" key="GridCell.Tab.0.right/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621510848096" />
+    <state width="1054" height="320" key="GridCell.Tab.0.right/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621515548153" />
     <state width="867" height="232" key="GridCell.Tab.0.right/0.25.1536.935@0.25.1536.935" timestamp="1621433556663" />
     <state width="877" height="225" key="GridCell.Tab.0.right/49.25.1487.935@49.25.1487.935" timestamp="1621233862979" />
     <state width="1020" height="271" key="GridCell.Tab.1.bottom" timestamp="1621430369904">

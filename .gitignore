@@ -1,2 +1,4 @@
 
 *.class
+
+*.kotlin_module

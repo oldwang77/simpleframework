@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.File;
 import java.io.FileFilter;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.HashSet;
@@ -150,4 +151,20 @@ public class ClassUtil {
         extractPackageClass("com.imooc.entity");
     }
 
+    /**
+     * 设置类的属性的值
+     * @param field         成员变量
+     * @param targetBean    类实例
+     * @param fieldValue    成员变量的值
+     * @param accessible    是否设置为私有属性
+     */
+    public static void setField(Field field, Object targetBean, Object fieldValue, boolean accessible) {
+        field.setAccessible(accessible);
+        try {
+            field.set(targetBean,fieldValue);
+        } catch (IllegalAccessException e) {
+            log.error("setField error",e);
+            throw new RuntimeException();
+        }
+    }
 }

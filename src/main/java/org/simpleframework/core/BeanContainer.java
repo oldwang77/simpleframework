@@ -28,7 +28,7 @@ public class BeanContainer {
      *
      * @return
      */
-    boolean isLoaded() {
+    public boolean isLoaded() {
         return loaded;
     }
 

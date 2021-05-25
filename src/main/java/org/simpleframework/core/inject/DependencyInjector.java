@@ -40,6 +40,7 @@ public class DependencyInjector {
             }
             // 3 遍历成员变量，寻找是否有autowire注解
             for(Field field:fields){
+                // 实现了被@Autowire注解标记后的逻辑
                 if(field.isAnnotationPresent(Autowired.class)){
                     Autowired autowired = field.getAnnotation(Autowired.class);
                     String autowiredValue = autowired.value();

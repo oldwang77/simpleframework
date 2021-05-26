@@ -9,6 +9,7 @@ public class AlipayMethodInterceptor implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         beforePay();
+        // 调用被代理类的方法
         Object result = methodProxy.invokeSuper(o, args);
         afterPay();
         return result;

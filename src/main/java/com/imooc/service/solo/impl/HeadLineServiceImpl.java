@@ -25,6 +25,7 @@ public class HeadLineServiceImpl implements HeadLineService {
 
     @Override
     public Result<Boolean> removeHeadLine(int headLineId) {
+        log.info("removeHeadLine的方法执行了！");
         return null;
     }
 

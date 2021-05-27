@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.simpleframework.core.BeanContainer;
-import org.simpleframework.core.inject.DependencyInjector;
 
 public class DependencyInjectorTest {
 

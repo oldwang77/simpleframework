@@ -1,12 +1,15 @@
-package org.simpleframework.core.inject.annotation;
+package org.simpleframework.aop.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.FIELD)          //  只让autowired作用在成员变量上
+// order注解为了定义实现的顺序
+
+// 只能注入到类上
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Autowired {
-    String value() default "";
+public @interface Order {
+    int value();
 }

@@ -5,7 +5,7 @@ import com.imooc.entity.dto.Result;
 import com.imooc.service.combine.HeadLineShopCategoryCombineService;
 import lombok.Getter;
 import org.simpleframework.core.annotation.Controller;
-import org.simpleframework.core.inject.annotation.Autowired;
+import org.simpleframework.inject.annotation.Autowired;
 
 
 import javax.servlet.http.HttpServletRequest;

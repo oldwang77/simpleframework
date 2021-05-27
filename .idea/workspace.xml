@@ -31,13 +31,16 @@
     <property name="settings.editor.selected.configurable" value="Lombok plugin" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.simpleframework.aop.mock" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/java/com" />
       <recent name="$PROJECT_DIR$/src/main/java/com/imooc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProxyDemo">
+  <component name="RunManager" selected="JUnit.AspectWeaverTest.doAopTest">
     <configuration name="CallbackDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.pattern.callback.CallbackDemo" />
       <module name="simpleframework" />
@@ -77,32 +80,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DependencyInjectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AspectListExecutorTest.sortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpleframework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.simpleframework.inject.*" />
+          <option name="PATTERN" value="org.simpleframework.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.simpleframework.inject" />
-      <option name="MAIN_CLASS_NAME" value="org.simpleframework.inject.DependencyInjectorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.simpleframework.aop" />
+      <option name="MAIN_CLASS_NAME" value="org.simpleframework.aop.AspectListExecutorTest" />
+      <option name="METHOD_NAME" value="sortTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DependencyInjectorTest.doIocTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AspectWeaverTest.doAopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpleframework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.simpleframework.inject.*" />
+          <option name="PATTERN" value="org.simpleframework.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.simpleframework.inject" />
-      <option name="MAIN_CLASS_NAME" value="org.simpleframework.inject.DependencyInjectorTest" />
-      <option name="METHOD_NAME" value="doIocTest" />
+      <option name="PACKAGE_NAME" value="org.simpleframework.aop" />
+      <option name="MAIN_CLASS_NAME" value="org.simpleframework.aop.AspectWeaverTest" />
+      <option name="METHOD_NAME" value="doAopTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,18 +165,18 @@
     <list>
       <item itemvalue="Application.CallbackDemo" />
       <item itemvalue="Application.EventModeDemo" />
-      <item itemvalue="JUnit.DependencyInjectorTest" />
-      <item itemvalue="JUnit.DependencyInjectorTest.doIocTest" />
       <item itemvalue="Maven.simpleframework [tomcat7:run]" />
       <item itemvalue="Application.ProxyDemo" />
+      <item itemvalue="JUnit.AspectListExecutorTest.sortTest" />
+      <item itemvalue="JUnit.AspectWeaverTest.doAopTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AspectWeaverTest.doAopTest" />
+        <item itemvalue="JUnit.AspectListExecutorTest.sortTest" />
         <item itemvalue="Application.ProxyDemo" />
         <item itemvalue="Application.EventModeDemo" />
         <item itemvalue="Application.CallbackDemo" />
-        <item itemvalue="JUnit.DependencyInjectorTest" />
-        <item itemvalue="JUnit.DependencyInjectorTest.doIocTest" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +195,7 @@
       <workItem from="1621428144158" duration="29227000" />
       <workItem from="1621688776081" duration="3679000" />
       <workItem from="1621910539396" duration="1266000" />
-      <workItem from="1621913399939" duration="9796000" />
+      <workItem from="1621913399939" duration="26086000" />
     </task>
     <servers />
   </component>
@@ -207,84 +211,95 @@
       <screen x="49" y="25" width="1487" height="935" />
     </state>
     <state x="213" y="278" key="#com.intellij.execution.impl.EditConfigurationsDialog/49.25.1487.935@49.25.1487.935" timestamp="1621233904228" />
-    <state x="456" y="318" key="#com.intellij.ide.util.MemberChooser" timestamp="1622029252072">
+    <state x="456" y="318" key="#com.intellij.ide.util.MemberChooser" timestamp="1622038237741">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state x="456" y="318" key="#com.intellij.ide.util.MemberChooser/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622029252072" />
-    <state x="195" y="497" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1621483964168">
+    <state x="456" y="318" key="#com.intellij.ide.util.MemberChooser/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622038237741" />
+    <state x="195" y="497" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622036566953">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state x="195" y="497" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621483964168" />
+    <state x="195" y="497" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622036566953" />
     <state x="585" y="252" width="925" height="585" key="#xdebugger.evaluate" timestamp="1621351124522">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
     <state x="585" y="252" width="925" height="585" key="#xdebugger.evaluate/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621351124522" />
-    <state width="1576" height="299" key="GridCell.Tab.0.bottom" timestamp="1622035591196">
+    <state width="1622" height="369" key="GridCell.Tab.0.bottom" timestamp="1622107743032">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1576" height="299" key="GridCell.Tab.0.bottom/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622035591196" />
+    <state width="1622" height="369" key="GridCell.Tab.0.bottom/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743032" />
     <state width="1508" height="373" key="GridCell.Tab.0.bottom/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866960" />
     <state width="1246" height="373" key="GridCell.Tab.0.bottom/0.25.1488.935@0.25.1488.935" timestamp="1621785618287" />
     <state width="867" height="232" key="GridCell.Tab.0.bottom/0.25.1536.935@0.25.1536.935" timestamp="1621433556663" />
     <state width="877" height="225" key="GridCell.Tab.0.bottom/49.25.1487.935@49.25.1487.935" timestamp="1621233862980" />
-    <state width="1576" height="299" key="GridCell.Tab.0.center" timestamp="1622035591195">
+    <state width="1622" height="369" key="GridCell.Tab.0.center" timestamp="1622107743031">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1576" height="299" key="GridCell.Tab.0.center/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622035591195" />
+    <state width="1622" height="369" key="GridCell.Tab.0.center/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743031" />
     <state width="1508" height="373" key="GridCell.Tab.0.center/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866959" />
     <state width="1246" height="373" key="GridCell.Tab.0.center/0.25.1488.935@0.25.1488.935" timestamp="1621785618287" />
     <state width="867" height="232" key="GridCell.Tab.0.center/0.25.1536.935@0.25.1536.935" timestamp="1621433556662" />
     <state width="877" height="225" key="GridCell.Tab.0.center/49.25.1487.935@49.25.1487.935" timestamp="1621233862979" />
-    <state width="1576" height="299" key="GridCell.Tab.0.left" timestamp="1622035591194">
+    <state width="1622" height="369" key="GridCell.Tab.0.left" timestamp="1622107743031">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1576" height="299" key="GridCell.Tab.0.left/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622035591194" />
+    <state width="1622" height="369" key="GridCell.Tab.0.left/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743031" />
     <state width="1508" height="373" key="GridCell.Tab.0.left/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866958" />
     <state width="1246" height="373" key="GridCell.Tab.0.left/0.25.1488.935@0.25.1488.935" timestamp="1621785618287" />
     <state width="867" height="232" key="GridCell.Tab.0.left/0.25.1536.935@0.25.1536.935" timestamp="1621433556662" />
     <state width="877" height="225" key="GridCell.Tab.0.left/49.25.1487.935@49.25.1487.935" timestamp="1621233862978" />
-    <state width="1576" height="299" key="GridCell.Tab.0.right" timestamp="1622035591196">
+    <state width="1622" height="369" key="GridCell.Tab.0.right" timestamp="1622107743032">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1576" height="299" key="GridCell.Tab.0.right/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622035591196" />
+    <state width="1622" height="369" key="GridCell.Tab.0.right/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743032" />
     <state width="1508" height="373" key="GridCell.Tab.0.right/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866959" />
     <state width="1246" height="373" key="GridCell.Tab.0.right/0.25.1488.935@0.25.1488.935" timestamp="1621785618287" />
     <state width="867" height="232" key="GridCell.Tab.0.right/0.25.1536.935@0.25.1536.935" timestamp="1621433556663" />
     <state width="877" height="225" key="GridCell.Tab.0.right/49.25.1487.935@49.25.1487.935" timestamp="1621233862979" />
-    <state width="1508" height="373" key="GridCell.Tab.1.bottom" timestamp="1621597248089">
+    <state width="1622" height="369" key="GridCell.Tab.1.bottom" timestamp="1622107743858">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1508" height="373" key="GridCell.Tab.1.bottom/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621597248089" />
+    <state width="1622" height="369" key="GridCell.Tab.1.bottom/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743858" />
     <state width="1508" height="373" key="GridCell.Tab.1.bottom/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866961" />
     <state width="1020" height="271" key="GridCell.Tab.1.bottom/0.25.1536.935@0.25.1536.935" timestamp="1621430369904" />
-    <state width="1508" height="373" key="GridCell.Tab.1.center" timestamp="1621597248088">
+    <state width="1622" height="369" key="GridCell.Tab.1.center" timestamp="1622107743858">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1508" height="373" key="GridCell.Tab.1.center/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621597248088" />
+    <state width="1622" height="369" key="GridCell.Tab.1.center/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743858" />
     <state width="1508" height="373" key="GridCell.Tab.1.center/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866960" />
     <state width="1020" height="271" key="GridCell.Tab.1.center/0.25.1536.935@0.25.1536.935" timestamp="1621430369903" />
-    <state width="1508" height="373" key="GridCell.Tab.1.left" timestamp="1621597248088">
+    <state width="1622" height="369" key="GridCell.Tab.1.left" timestamp="1622107743857">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1508" height="373" key="GridCell.Tab.1.left/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621597248088" />
+    <state width="1622" height="369" key="GridCell.Tab.1.left/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743857" />
     <state width="1508" height="373" key="GridCell.Tab.1.left/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866960" />
     <state width="1020" height="271" key="GridCell.Tab.1.left/0.25.1536.935@0.25.1536.935" timestamp="1621430369903" />
-    <state width="1508" height="373" key="GridCell.Tab.1.right" timestamp="1621597248089">
+    <state width="1622" height="369" key="GridCell.Tab.1.right" timestamp="1622107743858">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state width="1508" height="373" key="GridCell.Tab.1.right/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1621597248089" />
+    <state width="1622" height="369" key="GridCell.Tab.1.right/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107743858" />
     <state width="1508" height="373" key="GridCell.Tab.1.right/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621583866960" />
     <state width="1020" height="271" key="GridCell.Tab.1.right/0.25.1536.935@0.25.1536.935" timestamp="1621430369904" />
     <state x="764" y="187" key="extract.method.dialog" timestamp="1621240760113">
       <screen x="49" y="25" width="1487" height="935" />
     </state>
     <state x="764" y="187" key="extract.method.dialog/49.25.1487.935@49.25.1487.935" timestamp="1621240760113" />
-    <state x="891" y="258" width="786" height="792" key="search.everywhere.popup" timestamp="1622035015886">
+    <state x="891" y="258" width="786" height="792" key="search.everywhere.popup" timestamp="1622107518213">
       <screen x="0" y="25" width="1741" height="1095" />
     </state>
-    <state x="891" y="258" width="786" height="792" key="search.everywhere.popup/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622035015886" />
+    <state x="891" y="258" width="786" height="792" key="search.everywhere.popup/-1116.358.1116.795/0.25.1741.1095@0.25.1741.1095" timestamp="1622107518213" />
     <state x="917" y="258" width="808" height="792" key="search.everywhere.popup/-1116.358.1116.795/0.25.1792.1095@0.25.1792.1095" timestamp="1621482810048" />
     <state x="810" y="224" width="670" height="676" key="search.everywhere.popup/49.25.1487.935@49.25.1487.935" timestamp="1621234222282" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/simpleframework/aop/AspectWeaverTest.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/simpleframework$DependencyInjectorTest.ic" NAME="DependencyInjectorTest Coverage Results" MODIFIED="1621582569272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

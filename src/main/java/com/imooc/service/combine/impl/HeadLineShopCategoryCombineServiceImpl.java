@@ -8,7 +8,7 @@ import com.imooc.service.combine.HeadLineShopCategoryCombineService;
 import com.imooc.service.solo.HeadLineService;
 import com.imooc.service.solo.ShopCategoryService;
 import org.simpleframework.core.annotation.Service;
-import org.simpleframework.core.inject.annotation.Autowired;
+import org.simpleframework.inject.annotation.Autowired;
 
 
 import java.util.List;

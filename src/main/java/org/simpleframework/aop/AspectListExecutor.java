@@ -10,13 +10,20 @@ import org.simpleframework.util.ValidationUtil;
 import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class AspectListExecutor implements MethodInterceptor {
     // 被代理的类
     private Class<?> targetClass;
 
-    // AspectList 获取被@Aspect @Order 标注的DefaultAspect列表
+    /** AspectList 获取被@Aspect @Order 标注的DefaultAspect列表
+
+     * public class AspectInfo {
+     *     private int orderIndex;
+     *     private DefaultAspect aspectObject;
+     * }
+     */
     @Getter
     private List<AspectInfo> sortedAspectInfoList;
 
@@ -45,21 +52,43 @@ public class AspectListExecutor implements MethodInterceptor {
     @Override
     public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         Object returnValue = null;
+
+        // AOP2.0
+        // 对传入的aspectInfoList进行精筛
+        collectAccurateMatchedAspectList(method);
+
+        // 如果sortedAspectInfoList，那么没有横切逻辑，直接执行被代理对象的方法
         if (ValidationUtil.isEmpty(sortedAspectInfoList)) {
+            returnValue = methodProxy.invokeSuper(proxy, args);
             return returnValue;
         }
+
         // 1 按照order顺序升序完成Aspect所有的before方法
         invokeBeforeAdvices(method, args);
         // 2 执行被代理类的方法
         try {
             returnValue = methodProxy.invokeSuper(proxy, args);
             // 3 如果被代理类方法正常返回，则按照order的顺序执行完所有Aspect的afterRuning方法
-            invokeAfterReturningAdvices(method, args, returnValue);
+            returnValue =  invokeAfterReturningAdvices(method, args, returnValue);
         } catch (Exception e) {
             // 4 如果抛出异常，则按照order的顺序降序执行完所有的Aspect的afterThrowing方法
             invokeAfterThrowingAdvices(method, args, e);
         }
         return returnValue;
+    }
+
+    // AOP2.0实现精筛
+    private void collectAccurateMatchedAspectList(Method method) {
+        if(ValidationUtil.isEmpty(sortedAspectInfoList)) return ;
+
+        Iterator<AspectInfo> it = sortedAspectInfoList.iterator();
+        while(it.hasNext()){
+            AspectInfo aspectInfo = it.next();
+            // 精筛
+            if(!aspectInfo.getPointCutLocator().accurateMatches(method)){
+                it.remove();
+            }
+        }
     }
 
     // 1 按照order顺序升序完成Aspect所有的before方法

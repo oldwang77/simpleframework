@@ -45,6 +45,7 @@
             <version>3.2.9</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <!--引入AspectJ依赖-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
